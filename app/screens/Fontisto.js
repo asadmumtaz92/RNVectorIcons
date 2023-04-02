@@ -1,16 +1,14 @@
 import React from 'react'
 import {
-    StyleSheet,
     FlatList,
     View,
 } from 'react-native'
 
-import { Colors } from '../styles/color'
 import { gStyles } from '../styles/globelStyle'
 
 import { FontistoIconsList } from '../constantData/FontsList'
 
-import Icons from 'react-native-vector-icons/AntDesign'
+import Icons from 'react-native-vector-icons/Fontisto'
 
 const Fontisto = (props) => {
 
@@ -19,16 +17,13 @@ const Fontisto = (props) => {
 
         return (
             <View key={item?.id} style={gStyles.fontItem} >
-                <Icons
-                    name={item?.name}
-                    style={gStyles.icon}
-                />
+                <Icons name={item?.name} style={gStyles.icon} />
             </View>
         )
     }
 
     return (
-        <View style={styles.container}>
+        <View style={gStyles.container}>
             <FlatList
                 data={FontistoIconsList}
                 contentContainerStyle={gStyles.flatlist}
@@ -39,12 +34,5 @@ const Fontisto = (props) => {
         </View>
     )
 }
-
-const styles = StyleSheet.create({
-    container: {
-        backgroundColor: Colors.white,
-        flex: 1,
-    },
-})
 
 export default Fontisto

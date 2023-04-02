@@ -1,11 +1,9 @@
 import React from 'react'
 import {
-    StyleSheet,
     FlatList,
     View,
 } from 'react-native'
 
-import { Colors } from '../styles/color'
 import { gStyles } from '../styles/globelStyle'
 
 import { EntypoIconsList } from '../constantData/FontsList'
@@ -25,7 +23,7 @@ const Entypo = (props) => {
     }
 
     return (
-        <View style={styles.container}>
+        <View style={gStyles.container}>
             <FlatList
                 data={EntypoIconsList}
                 contentContainerStyle={gStyles.flatlist}
@@ -36,12 +34,5 @@ const Entypo = (props) => {
         </View>
     )
 }
-
-const styles = StyleSheet.create({
-    container: {
-        backgroundColor: Colors.white,
-        flex: 1,
-    },
-})
 
 export default Entypo

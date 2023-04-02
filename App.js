@@ -1,19 +1,23 @@
 import React from 'react'
 import {
-    SafeAreaView,
     StyleSheet,
     View,
+    StatusBar
 } from 'react-native'
 
-import AntDesign from 'react-native-vector-icons/AntDesign'
-import Icon from 'react-native-vector-icons/EvilIcons'
+import MyNav from './app/navigations/myNavigations'
+
+// import AntDesign from 'react-native-vector-icons/AntDesign'
+// import Icon from 'react-native-vector-icons/EvilIcons'
 
 const App = () => {
 
     return (
-        <SafeAreaView style={{}}>
+        <View style={styles.contanier}>
+            <StatusBar barStyle='light-content' />
+            <MyNav />
 
-            <View style={styles.iconBox}>
+            {/* <View style={styles.iconBox}>
                 <Icon
                     name='user'
                     style={{ color: '#000', fontSize: 40 }}
@@ -22,13 +26,15 @@ const App = () => {
                     name='customerservice'
                     style={{ color: '#000', fontSize: 30 }}
                 />
-            </View>
-
-        </SafeAreaView>
+            </View> */}
+        </View>
     )
 }
 
 const styles = StyleSheet.create({
+    contanier: {
+        flex: 1,
+    },
     iconBox: {
         justifyContent: 'space-evenly',
         borderBottomWidth: 0.5,

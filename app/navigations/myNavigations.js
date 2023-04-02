@@ -1,7 +1,6 @@
 import React from 'react'
 import {
     TouchableOpacity,
-    StyleSheet,
     Image,
     Text,
 } from 'react-native'
@@ -10,12 +9,13 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { NavigationContainer } from '@react-navigation/native'
 
 import { Colors } from '../styles/color'
+import { gStyles } from '../styles/globelStyle'
 
 import AppRoute from '../AppRoute'
 
 import AntDesign from '../screens/AntDesign'
 import Entypo from '../screens/Entypo'
-import EvilIcons from '../screens/Evilicons'
+import EvilIcons from '../screens/EvilIcons'
 import Feather from '../screens/Feather'
 import FontAwesome5 from '../screens/Fontawesome5'
 import FontAwesome5Brands from '../screens/fontAwesome5Brands'
@@ -36,15 +36,15 @@ const myNav = () => {
 
     const myLink = (title, onPress, img) => {
         return (
-            title != null && < TouchableOpacity onPress={onPress} activeOpacity={0.9} style={styles.link} >
-                {img != null && <Image source={img} style={styles.img} />}
-                {title && <Text style={styles.linkText}>{title}</Text>}
+            title != null && < TouchableOpacity onPress={onPress} activeOpacity={0.9} style={gStyles.link} >
+                {img != null && <Image source={img} style={gStyles.img} />}
+                {title && <Text style={gStyles.linkText}>{title}</Text>}
             </TouchableOpacity >
         )
     }
     const myTitle = (title) => {
         return (
-            title && <Text style={styles.title}>{title}</Text>
+            title && <Text style={gStyles.title}>{title}</Text>
         )
     }
 
@@ -53,8 +53,8 @@ const myNav = () => {
             <Stack.Navigator
                 initialRouteName='AppRoute'
                 screenOptions={{
-                    headerTitleStyle: styles.headerTitleStyle,
-                    headerStyle: styles.headerStyle,
+                    headerTitleStyle: gStyles.headerTitleStyle,
+                    headerStyle: gStyles.headerStyle,
                     headerBackTitleVisible: false, // hide backScreen name
                     headerTintColor: Colors.white,
                     headerTitleAlign: 'center',
@@ -188,42 +188,5 @@ const myNav = () => {
         </NavigationContainer>
     )
 }
-
-const styles = StyleSheet.create({
-    contanier: {
-        flex: 1,
-    },
-    title: {
-        textTransform: 'uppercase',
-        textAlign: 'center',
-        color: Colors.white,
-        fontWeight: '500',
-        fontSize: 16,
-    },
-    link: {
-        alignItems: 'center',
-        flexDirection: 'row',
-    },
-    img: {
-        marginRight: 8,
-    },
-    linkText: {
-        textTransform: 'uppercase',
-        textAlign: 'center',
-        color: Colors.white,
-        fontWeight: '500',
-        fontSize: 14,
-    },
-    headerStyle: {
-        backgroundColor: Colors.primery,
-    },
-    headerTitleStyle: {
-        textTransform: 'uppercase',
-        textAlign: 'center',
-        color: Colors.white,
-        fontWeight: '500',
-        fontSize: 16,
-    },
-})
 
 export default myNav

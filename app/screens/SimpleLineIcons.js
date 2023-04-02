@@ -1,11 +1,9 @@
 import React from 'react'
 import {
-    StyleSheet,
     FlatList,
     View,
 } from 'react-native'
 
-import { Colors } from '../styles/color'
 import { gStyles } from '../styles/globelStyle'
 
 import { SimpleLineIconsList } from '../constantData/FontsList'
@@ -19,16 +17,13 @@ const SimpleLineIcons = (props) => {
 
         return (
             <View key={item?.id} style={gStyles.fontItem} >
-                <Icons
-                    name={item?.name}
-                    style={gStyles.icon}
-                />
+                <Icons name={item?.name} style={gStyles.icon} />
             </View>
         )
     }
 
     return (
-        <View style={styles.container}>
+        <View style={gStyles.container}>
             <FlatList
                 data={SimpleLineIconsList}
                 contentContainerStyle={gStyles.flatlist}
@@ -39,12 +34,5 @@ const SimpleLineIcons = (props) => {
         </View>
     )
 }
-
-const styles = StyleSheet.create({
-    container: {
-        backgroundColor: Colors.white,
-        flex: 1,
-    },
-})
 
 export default SimpleLineIcons

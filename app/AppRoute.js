@@ -13,7 +13,7 @@ const AppRoute = (props) => {
 
     return (
         <View style={styles.contanier}>
-            <StatusBar barStyle='light-content' backgroundColor={Colors.primery} />
+            <StatusBar barStyle='dark-content' backgroundColor={Colors.primery} />
 
             <FontList />
 

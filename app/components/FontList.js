@@ -17,7 +17,6 @@ const FontList = (props) => {
 
     const changeScreen = (appStatus) => {
         navigation.navigate(appStatus)
-        // console.log(appStatus)
     }
 
     const renderItem = (items) => {
@@ -39,6 +38,7 @@ const FontList = (props) => {
             contentContainerStyle={styles.flatlist}
             keyExtractor={(item) => item.id}
             renderItem={renderItem}
+            showsVerticalScrollIndicator={false}
         />
     )
 }

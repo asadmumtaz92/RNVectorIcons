@@ -5,14 +5,54 @@ import {
 import { Colors } from './color'
 
 export const gStyles = StyleSheet.create({
+    // STYLE FOR NAVIGATIONS
+    container: {
+        backgroundColor: Colors.white,
+        flex: 1,
+    },
+    title: {
+        textTransform: 'uppercase',
+        textAlign: 'center',
+        color: Colors.white,
+        fontWeight: '500',
+        fontSize: 16,
+    },
+    link: {
+        alignItems: 'center',
+        flexDirection: 'row',
+    },
+    img: {
+        marginRight: 8,
+    },
+    linkText: {
+        textTransform: 'uppercase',
+        textAlign: 'center',
+        color: Colors.white,
+        fontWeight: '500',
+        fontSize: 14,
+    },
+    headerStyle: {
+        backgroundColor: Colors.primery,
+    },
+    headerTitleStyle: {
+        textTransform: 'uppercase',
+        textAlign: 'center',
+        color: Colors.white,
+        fontWeight: '500',
+        fontSize: 16,
+    },
+
+
     flatlist: {
-        marginHorizontal: 20
+        marginHorizontal: 20,
+        paddingBottom: 20,
+        marginBottom: 10,
     },
     fontItem: {
         backgroundColor: Colors.white,
         marginHorizontal: 8,
-        marginTop: 20,
-        padding: 15,
+        marginTop: 25,
+        padding: 20,
         flex: 1,
 
         shadowColor: Colors.primery,
@@ -20,7 +60,7 @@ export const gStyles = StyleSheet.create({
         shadowRadius: 2,
         shadowOffset: {
             height: 0,
-            width: 0
+            width: 0,
         },
         elevation: 5,
     },

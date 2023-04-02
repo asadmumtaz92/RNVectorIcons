@@ -1,34 +1,29 @@
 import React from 'react'
 import {
-    StyleSheet,
     FlatList,
     View,
 } from 'react-native'
 
-import { Colors } from '../styles/color'
 import { gStyles } from '../styles/globelStyle'
 
 import { EvilIconsList } from '../constantData/FontsList'
 
-import EvilIcons from 'react-native-vector-icons/EvilIcons'
+import Icons from 'react-native-vector-icons/EvilIcons'
 
-const Evil_Icon = (props) => {
+const EvilIcons = (props) => {
 
     const renderItem = (items) => {
         let item = items.item
 
         return (
             <View key={item?.id} style={gStyles.fontItem} >
-                <EvilIcons
-                    name={item?.name}
-                    style={gStyles.icon}
-                />
+                <Icons name={item?.name} style={gStyles.icon} />
             </View>
         )
     }
 
     return (
-        <View style={styles.container}>
+        <View style={gStyles.container}>
             <FlatList
                 data={EvilIconsList}
                 contentContainerStyle={gStyles.flatlist}
@@ -40,11 +35,4 @@ const Evil_Icon = (props) => {
     )
 }
 
-const styles = StyleSheet.create({
-    container: {
-        backgroundColor: Colors.white,
-        flex: 1,
-    },
-})
-
-export default Evil_Icon
+export default EvilIcons

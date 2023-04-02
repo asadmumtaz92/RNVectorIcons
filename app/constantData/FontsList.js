@@ -11,7 +11,7 @@ export const FontsList = [
     },
     {
         id: 3,
-        name: 'Evil Icons',
+        name: 'EvilIcons',
         action: 'EvilIcons',
     },
     {
